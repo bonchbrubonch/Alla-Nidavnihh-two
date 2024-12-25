@@ -1,0 +1,665 @@
+@import 'fonts';
+@import 'global';
+
+.intro {
+	padding: 35px 0 50px;
+	background-image: url("../images/content/intro.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: top left;
+
+	h1 {
+		position: relative;
+		font-family: "Montserrat Alternates", serif;
+		font-style: italic;
+		font-size: 60px;
+		font-weight: 900;
+		line-height: 140%;
+		text-transform: uppercase;
+		margin: 0 0 325px 0;
+
+		span {
+			position: absolute;
+			left: 14%;
+			bottom: -40px;
+			font-style: normal;
+			display: block;
+			padding: 10px 25px;
+			width: 275px;
+			font-family: 'Gilroy';
+			color: rgb(255, 255, 255);
+			font-size: 18px;
+			text-transform: lowercase;
+			font-weight: 600;
+			line-height: 114%;
+			background-image: url("../images/icons/title-bg.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+	}
+
+	&__box {
+		position: relative;
+		max-width: 300px;
+		width: 100%;
+		padding: 15px 25px 20px 12px;
+		border-radius: 0px 24px 24px 24px;
+		background: rgb(255, 252, 230);
+
+
+		&>span {
+			display: flex;
+			margin: 0 0 10px 0;
+			font-family: "Montserrat Alternates", serif;
+			font-style: italic;
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 100%;
+		}
+
+		p {
+			margin: 0;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 140%;
+
+			span {
+				font-weight: 700;
+			}
+		}
+
+		a {
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain
+			}
+		}
+
+		.pulse {
+			position: absolute;
+			bottom: -20px;
+			right: -15px;
+			width: 65px;
+			height: 65px;
+			display: flex;
+		}
+
+		.pulse::after,
+		.pulse::before {
+			content: '';
+			position: absolute;
+			border: 3px solid #E1F1EB;
+			left: -20px;
+			opacity: 0;
+			right: -20px;
+			top: -20px;
+			bottom: -20px;
+			border-radius: 50%;
+			animation: pulse 4.5s linear infinite;
+		}
+
+		.pulse::after {
+			animation-delay: 1.25s;
+		}
+
+		@keyframes pulse {
+			0% {
+				transform: scale(0.5);
+				opacity: 0;
+			}
+
+			50% {
+				opacity: 1;
+			}
+
+			100% {
+				transform: scale(1.2);
+				opacity: 0;
+			}
+		}
+
+	}
+
+}
+
+.section-two {
+	padding: 20px 0 55px;
+
+	.title {
+		margin: 0 0 75px 0;
+	}
+
+	h6 {
+		margin: 0 0 10px 0;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 140%;
+
+		span {
+			font-weight: 700;
+		}
+	}
+
+
+	li {
+		margin: 0 0 15px 0;
+		padding: 20px 20px 20px 45px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 23px;
+			left: 20px;
+			width: 15px;
+			height: 15px;
+			background-image: url("../images/icons/check.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+	}
+}
+
+.section-three {
+	padding: 70px 0;
+	background: linear-gradient(180.00deg, rgba(255, 252, 230, 0.7), rgba(255, 252, 230, 0.4) 100%);
+
+	.title {
+		margin: 0 0 90px 0;
+	}
+
+
+	ol {
+		list-style-type: decimal;
+		margin: 0;
+		padding: 0 0 0 15px;
+	}
+
+	li {
+		margin: 0 0 25px 0;
+		padding: 15px 15px 15px 25px;
+	}
+
+	ol li::before {
+		content: counter(list-item) "";
+		position: absolute;
+		left: -15px;
+		top: -12px;
+		color: rgb(255, 255, 255);
+		font-family: "Montserrat Alternates", serif;
+		font-size: 24px;
+		font-weight: 800;
+		line-height: 140%;
+		width: 35px;
+		height: 35px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 8px;
+		background: rgb(92, 38, 110);
+	}
+
+	h6 {
+		margin: 0 0 5px 0;
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	p {
+		font-size: 14px;
+		margin: 0;
+	}
+
+	.btn {
+		margin: 40px auto 0;
+		width: 220px;
+	}
+}
+
+
+.Accordion {
+	padding: 70px 0 40px;
+
+	.title {
+		margin: 0 0 80px 0;
+
+		span {
+			right: -180px;
+			bottom: -45px;
+			padding: 25px 35px;
+		}
+
+	}
+
+	&__tabs {
+		max-width: 600px;
+		list-style: none;
+	}
+
+	&__tab {
+		width: 100%;
+		margin: 0 0 15px 0;
+
+		&__headline {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			border-bottom: 1px solid rgba(#F8F8F8, 0.5);
+			transition: 0.2s ease all;
+			padding: 20px 15px;
+			cursor: pointer;
+			font-weight: 400;
+
+
+			>h4 {
+				padding: 0 40px 0 0;
+				user-select: none;
+				margin: 0;
+				font-family: "Montserrat Alternates", serif;
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 140%;
+			}
+
+			.icon {
+				position: relative;
+				width: 25px;
+				height: 25px;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;
+				border: 1px solid rgb(181, 103, 207);
+				border-radius: 50%;
+				flex-shrink: 0;
+
+				&::after,
+				&::before {
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 12px;
+					height: 1px;
+					background-color: rgb(181, 103, 207);
+				}
+
+				&::after {
+					transform: translate(-50%, -50%) rotate(90deg);
+				}
+			}
+
+		}
+
+		&__content {
+			overflow: hidden;
+			padding: 0px 15px;
+			box-sizing: border-box;
+			height: 100%;
+			max-height: 0;
+			transition: 0.4s ease all;
+		}
+
+		&--open {
+			.Accordion__tab {
+				&__headline {
+					.icon::after {
+						transform: scaleY(0);
+					}
+				}
+			}
+		}
+	}
+
+	.btn {
+		width: 180px;
+		margin: 40px auto 0;
+		background-color: #B567CF;
+	}
+}
+
+/////////////////////
+.author {
+	padding: 30px 0 80px;
+
+	.title {
+		margin: 0 0 75px 0;
+	}
+
+	.container {
+		&>img {
+			width: 100%;
+			height: auto;
+			object-fit: contain;
+		}
+	}
+
+	&__box {
+		position: relative;
+		z-index: 1;
+		margin: -45px -15px 0 0;
+		max-width: 330px;
+		width: 100%;
+		padding: 25px;
+		border-radius: 0px 24px 24px 24px;
+		background: rgb(255, 252, 230);
+
+		h6 {
+			margin: 0 0 10px 0;
+			font-family: "Montserrat Alternates", serif;
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 100%;
+			font-style: italic;
+		}
+
+		span {
+			font-weight: 700;
+		}
+	}
+
+	&__inner {
+		padding: 10px;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.pulse-2 {}
+
+	.pulse-2 {
+		position: absolute;
+		right: -12px;
+		bottom: -14px;
+		width: 65px;
+		height: 65px;
+		display: flex;
+	}
+
+	.pulse-2::after,
+	.pulse-2::before {
+		content: '';
+		position: absolute;
+		border: 3px solid #E1F1EB;
+		left: -20px;
+		opacity: 0;
+		right: -20px;
+		top: -20px;
+		bottom: -20px;
+		border-radius: 50%;
+		animation: pulse-2 4.5s linear infinite;
+	}
+
+	.pulse-2::after {
+		animation-delay: 1.25s;
+	}
+
+	@keyframes pulse-2 {
+		0% {
+			transform: scale(0.5);
+			opacity: 0;
+		}
+
+		50% {
+			opacity: 1;
+		}
+
+		100% {
+			transform: scale(1.2);
+			opacity: 0;
+		}
+	}
+
+}
+
+.services {
+	padding: 70px 0 60px;
+	background: linear-gradient(180.00deg, rgba(255, 252, 230, 0.7), rgba(255, 252, 230, 0.4) 100%);
+
+	.title {
+		margin: 0 0 75px 0;
+	}
+
+	&__list {
+		li {
+			padding: 15px 20px;
+			margin: 0 0 15px 0;
+		}
+
+		ul {
+			li {
+				position: relative;
+				margin: 0 0 15px 0;
+				padding: 0 0 0 30px;
+				font-family: "Gilroy";
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 140%;
+
+				&::after {
+					content: "";
+					position: absolute;
+					top: 2px;
+					left: 0;
+					width: 15px;
+					height: 15px;
+					background-image: url("../images/icons/check2.svg");
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: center;
+				}
+			}
+		}
+
+		h6 {
+			margin: 0 0 15px 0;
+			font-family: "Montserrat Alternates", serif;
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 140%;
+			font-style: italic;
+		}
+	}
+
+	&__price {
+		color: rgb(92, 38, 110);
+		font-family: "Montserrat Alternates", serif;
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 140%;
+
+		span {
+			color: rgb(181, 103, 207);
+			font-family: "Gilroy";
+			font-size: 14px;
+			font-weight: 400;
+		}
+	}
+
+	&__price+p {
+		color: rgb(96, 96, 96);
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 140%;
+	}
+
+	&__list-title {
+		position: relative;
+		margin: 3px 0 15px 0;
+		padding: 24px 0 0 0;
+		font-family: "Gilroy";
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 140%;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 1px;
+			background-image: url("../images/icons/line.svg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+	}
+
+	.btn {
+		margin: 40px 0 0 0;
+		width: 100%;
+		height: 45px;
+		text-align: center;
+		justify-content: center;
+	}
+
+	&__btns {
+		display: flex;
+		margin: 0 0 15px -10px;
+
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			width: calc(50% - 10px);
+			margin: 0 0 0 10px;
+			height: 36px;
+			border-radius: 50px;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 140%;
+
+		}
+
+		a:nth-child(1) {
+			background: rgb(181, 103, 207);
+			color: #fff;
+		}
+
+		a:nth-child(2) {
+			color: rgb(92, 38, 110);
+			border: 1px solid rgb(181, 103, 207);
+
+		}
+	}
+
+}
+
+
+.start {
+	min-height: 360px;
+	padding: 230px 0 30px;
+	background-image: url("../images/content/author-2.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: bottom right;
+
+	.title {
+		margin: 0 0 50px 0;
+
+		span {
+			padding: 0;
+			width: 322px;
+			height: 83px;
+			bottom: -63px;
+			right: -140px;
+			transform: rotate(-1deg)
+		}
+	}
+
+	&__box {
+		max-width: 235px;
+		width: 100%;
+		padding: 12px;
+		border-radius: 0px 12px 12px 0px;
+		background: rgb(255, 252, 230);
+		font-size: 12px;
+	}
+}
+
+.footer {
+	background-color: #1A1600;
+	color: #fff;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		padding: 30px 0;
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+
+
+		a {
+			display: flex;
+			margin: 0 0 5px 0;
+			color: rgb(255, 255, 255);
+			font-size: 10px;
+			font-weight: 400;
+			line-height: 140%;
+			text-decoration: underline;
+			text-decoration-color: transparent;
+			transition: linear .2s;
+
+			&:hover {
+				text-decoration-color: #fff;
+			}
+		}
+	}
+
+	&__bottom {
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+		}
+
+		padding: 10px 0;
+
+		p {
+			color: #fff;
+			font-size: 8px;
+			font-weight: 400;
+			line-height: 140%;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "media";
