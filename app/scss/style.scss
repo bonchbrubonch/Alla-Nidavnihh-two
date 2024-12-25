@@ -3,7 +3,7 @@
 
 .intro {
 	padding: 35px 0 50px;
-	background-image: url("../images/content/intro.png");
+	background-image: url("../images/content/intro.webp");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: top left;
@@ -43,6 +43,7 @@
 		position: relative;
 		max-width: 300px;
 		width: 100%;
+		margin: 0 0 0 -15px;
 		padding: 15px 25px 20px 12px;
 		border-radius: 0px 24px 24px 24px;
 		background: rgb(255, 252, 230);
@@ -130,6 +131,10 @@
 
 	.title {
 		margin: 0 0 75px 0;
+
+		span {
+			bottom: -30px;
+		}
 	}
 
 	h6 {
@@ -169,6 +174,11 @@
 
 	.title {
 		margin: 0 0 90px 0;
+
+		span {
+			bottom: -45px;
+			right: -75px;
+		}
 	}
 
 
@@ -227,9 +237,12 @@
 		margin: 0 0 80px 0;
 
 		span {
+			transform: rotate(0);
+			width: 230px;
+			height: 75px;
 			right: -180px;
 			bottom: -45px;
-			padding: 25px 35px;
+			padding: 0;
 		}
 
 	}
@@ -249,10 +262,9 @@
 			align-items: flex-start;
 			border-bottom: 1px solid rgba(#F8F8F8, 0.5);
 			transition: 0.2s ease all;
-			padding: 20px 15px;
+			padding: 15px;
 			cursor: pointer;
 			font-weight: 400;
-
 
 			>h4 {
 				padding: 0 40px 0 0;
@@ -304,6 +316,7 @@
 		}
 
 		&--open {
+
 			.Accordion__tab {
 				&__headline {
 					.icon::after {
@@ -321,31 +334,54 @@
 	}
 }
 
+.Accordion .gradient-border::after {
+	top: 0;
+	right: 0;
+	bottom: -1px;
+	left: 0;
+}
 
-.Accordion__tab{
+.gradient-border.Accordion__tab--open {
+	&::after {
+		top: -1px;
+		right: -1px;
+		bottom: -1px;
+		left: -1px;
+	}
+}
+
+.Accordion__tab {
 	display: none;
 }
+
 .Accordion__tab:nth-child(1),
 .Accordion__tab:nth-child(2),
 .Accordion__tab:nth-child(3),
 .Accordion__tab:nth-child(4),
-.Accordion__tab:nth-child(5){
+.Accordion__tab:nth-child(5) {
 	display: block;
 }
-.Accordion.open{
-	.btn-acordion{
+
+.Accordion.open {
+	.btn-acordion {
 		display: none;
 	}
-	.Accordion__tab{
+
+	.Accordion__tab {
 		display: block !important;
 	}
 }
+
 /////////////////////
 .author {
 	padding: 30px 0 80px;
 
 	.title {
 		margin: 0 0 75px 0;
+
+		span {
+			bottom: -30px;
+		}
 	}
 
 	.container {
@@ -359,7 +395,7 @@
 	&__box {
 		position: relative;
 		z-index: 1;
-		margin: -45px -15px 0 0;
+		margin: -45px 0 0 -15px;
 		max-width: 330px;
 		width: 100%;
 		padding: 25px;
@@ -441,6 +477,15 @@
 
 	.title {
 		margin: 0 0 75px 0;
+
+		span {
+			transform: rotate(0);
+			width: 180px;
+			height: 72px;
+			bottom: -50px;
+			right: -112px;
+			padding: 15px 25px;
+		}
 	}
 
 	&__list {
@@ -530,7 +575,7 @@
 			background-image: url("../images/icons/line.svg");
 			background-repeat: no-repeat;
 			background-size: cover;
-			background-position: center;
+			background-position: left;
 		}
 	}
 
@@ -565,7 +610,8 @@
 			color: rgb(92, 38, 110);
 			border: 1px solid rgb(181, 103, 207);
 			transition: linear .2s;
-			span{
+
+			span {
 				display: none;
 			}
 		}
@@ -576,58 +622,54 @@
 		}
 
 	}
-	li:nth-child(3){
+
+	li:nth-child(3) {
 		button:nth-child(2).active {
-			margin: 10px 0 0 0;
-		width: calc(100% - 10px);
-		span{
-			margin: 0 0 0 5px;
-			display: block;
-		}
+			margin: 10px 0 0 10px;
+			width: calc(100% - 10px);
+
+			span {
+				margin: 0 0 0 5px;
+				display: block;
+			}
 		}
 	}
 }
+
 .services__box,
 .sum {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+	display: none;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
 }
 
 .services__box.active,
 .sum.active {
-  display: block;
-  opacity: 1;
+	display: block;
+	opacity: 1;
 }
 
 .services__btns a {
-  padding: 10px;
-  text-decoration: none;
-  color: #333;
-  cursor: pointer;
+	padding: 10px;
+	text-decoration: none;
+	color: #333;
+	cursor: pointer;
 }
 
 .services__btns a.active {
-  color: #fff;
-  background-color: #007bff;
+	color: #fff;
+	background-color: #007bff;
 }
 
 .tab-content {
-  margin-top: 20px;
+	margin-top: 20px;
 }
-
-
-
-
-
-
-
 
 
 .start {
 	min-height: 360px;
 	padding: 230px 0 30px;
-	background-image: url("../images/content/author-2.png");
+	background-image: url("../images/content/author-2.webp");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: bottom right;
@@ -652,9 +694,26 @@
 		border-radius: 0px 12px 12px 0px;
 		background: rgb(255, 252, 230);
 		font-size: 12px;
+		margin: 0 0 0 -15px;
 	}
 }
+@media (max-width: 400px) {
+	.start {
+		min-height: 365px;
+		padding: 200px 0 30px;
+	}
 
+	.start .title span {
+		bottom: -60px;
+		right: -165px;
+		transform: rotate(1deg);
+	}
+
+	.start .title {
+		margin: 0 0 35px 0;
+		font-size: 24px;
+	}
+}
 .footer {
 	background-color: #1A1600;
 	color: #fff;

@@ -5,15 +5,337 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+
+
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
 
-  <header class="header"></header>
+  <!-- <header class="header"></header> -->
   <div class="wrapper">
-    <main class="main"></main>
-    <footer class="footer"></footer>
+    <main class="main">
+      <section class="intro">
+        <div class="container">
+          <h1>Гайд <span>для внутрішньої гармонії та емоційної стійкості</span></h1>
+          <div class="intro__box">
+            <span>Дізнайтеся!</span>
+            <p>як <span>керувати</span> своїми <span>емоціями</span> та <span>підтримувати спокій</span> навіть у <br>
+              складних ситуаціях.</p>
+            <a class="pulse" href="#"><img src="images/icons/intro-arrow.svg" alt="arrow"></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-two">
+        <div class="container">
+          <h3 class="title">Для кого цей <span style="background-image: url('images/icons/title-1.svg');">гайд?</span>
+          </h3>
+          <h6>Цей <span>гайд підходить для тих</span>, хто:</h6>
+          <ul>
+            <li class="gradient-border">Переживає постійний стрес через поєднання роботи, побуту та сімейних обов'язків.
+            </li>
+            <li class="gradient-border">Ти відчуваєш в собі великий потенціал, але поки не уявляєш, з чого почати</li>
+            <li class="gradient-border">Ти відчуваєш в собі великий потенціал, але поки не уявляєш, з чого почати</li>
+            <li class="gradient-border">Ти відчуваєш в собі великий потенціал, але поки не уявляєш, з чого почати</li>
+            <li class="gradient-border">Ти на 100% задоволена своїм життям і хочеш утримати результат</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section-three">
+        <div class="container">
+          <h3 class="title">Що містить цей <span style="background-image: url('images/icons/title-1.svg');">гайд?</span>
+          </h3>
+          <ol>
+            <li class="gradient-border">
+              <h6>Психофізіологія стресу</h6>
+              <p>Бажає навчитися швидким і ефективним методам стабілізації емоційного стану.
+              </p>
+            </li>
+            <li class="gradient-border">
+              <h6>Розуміння психосоматики</h6>
+              <p>Як емоції можуть впливати на фізичний стан і здоров'я.</p>
+            </li>
+            <li class="gradient-border">
+              <h6>Швидкі методи самодопомоги</h6>
+              <p> Ефективні вправи для зниження напруги, тривоги та стабілізації емоцій.
+              </p>
+            </li>
+            <li class="gradient-border">
+              <h6>Покроковий план дій</h6>
+              <p>Як скласти індивідуальний план для подолання стресу та підвищення стійкості.</p>
+            </li>
+            <li class="gradient-border">
+              <h6>Відновлення ресурсного стану</h6>
+              <p>Техніки для відпочинку, підвищення енергії та працездатності.</p>
+            </li>
+            <li class="gradient-border">
+              <h6>Практичні стратегії для щоденного життя</h6>
+              <p>Простий набір дій для створення гармонії та внутрішньої впевненості.</p>
+            </li>
+          </ol>
+          <a href="#" class="btn">Отримати Гайд <img src="images/icons/intro-arrow2.svg" alt="arrow"></a>
+        </div>
+      </section>
+
+      <section class="Accordion">
+        <div class="container">
+          <h3 class="title">Поширені<span style="background-image: url('images/icons/title-2.svg');"></span>
+          </h3>
+          <ul class="Accordion__tabs">
+            <li class="Accordion__tab gradient-border Accordion__tab--open" onclick="toggleAccordion(this)">
+              <div class="Accordion__tab__headline">
+                <h4>Чи підходить цей гайд для тих, хто живе за кордоном?</h4><span class="icon"></span>
+              </div>
+              <div class="Accordion__tab__content" style="max-height: none;">
+                <div class="wrapper">
+                  <p>Так, техніки та вправи універсальні й ефективні незалежно від місця проживання.</p>
+                </div>
+              </div>
+            </li>
+            <li class="Accordion__tab gradient-border" onclick="toggleAccordion(this)">
+              <div class="Accordion__tab__headline">
+                <h4>Скільки часу потрібно на вправи?</h4><span class="icon"></span>
+              </div>
+              <div class="Accordion__tab__content">
+                <div class="wrapper">
+                  <p>Lorem ipsum dolor sit amet...</p>
+                </div>
+              </div>
+            </li>
+            <li class="Accordion__tab gradient-border" onclick="toggleAccordion(this)">
+              <div class="Accordion__tab__headline">
+                <h4>Що робити, якщо я відчуваю постійну втому?
+                </h4><span class="icon"></span>
+              </div>
+              <div class="Accordion__tab__content">
+                <div class="wrapper">
+                  <p>Lorem ipsum dolor sit amet...</p>
+                </div>
+              </div>
+            </li>
+            <li class="Accordion__tab gradient-border" onclick="toggleAccordion(this)">
+              <div class="Accordion__tab__headline">
+                <h4>Як цей гайд допоможе впоратися з тривогою?</h4><span class="icon"></span>
+              </div>
+              <div class="Accordion__tab__content">
+                <div class="wrapper">
+                  <p>Lorem ipsum dolor sit amet...</p>
+                </div>
+              </div>
+            </li>
+            <li class="Accordion__tab gradient-border" onclick="toggleAccordion(this)">
+              <div class="Accordion__tab__headline">
+                <h4>Чи можна використовувати вправи для боротьби з безсонням?</h4><span class="icon"></span>
+              </div>
+              <div class="Accordion__tab__content">
+                <div class="wrapper">
+                  <p>Lorem ipsum dolor sit amet...</p>
+                </div>
+              </div>
+            </li>
+            <li class="Accordion__tab gradient-border" onclick="toggleAccordion(this)">
+              <div class="Accordion__tab__headline">
+                <h4>Чи можна використовувати вправи для боротьби з безсонням?</h4><span class="icon"></span>
+              </div>
+              <div class="Accordion__tab__content">
+                <div class="wrapper">
+                  <p>Lorem ipsum dolor sit amet...</p>
+                </div>
+              </div>
+            </li>
+            <li class="Accordion__tab gradient-border" onclick="toggleAccordion(this)">
+              <div class="Accordion__tab__headline">
+                <h4>Чи можна використовувати вправи для боротьби з безсонням?</h4><span class="icon"></span>
+              </div>
+              <div class="Accordion__tab__content">
+                <div class="wrapper">
+                  <p>Lorem ipsum dolor sit amet...</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="btn btn-acordion">Читати ще<img src="images/icons/intro-arrow3.svg" alt="arrow"></button>
+        </div>
+      </section>
+
+      <section class="author">
+        <div class="container">
+          <h3 class="title">Авторка<span style="background-image: url('images/icons/title-1.svg');">гайду</span></h3>
+          <img src="images/content/author.webp" alt="author">
+          <div class="author__box">
+            <h6>Алла Недавніх</h6>
+            <p><span>дипломований психолог із багаторічним досвідом</span> у роботі зі стресом, тривожністю та емоційним
+              вигоранням.</p>
+            <p><span>У період кризи</span> вона <span>сфокусувала</span> свою <span>діяльність на підтримці
+                українців</span>, допомагаючи їм зберегти ментальне здоров'я. </p>
+            <div class="author__inner gradient-border">
+              <p><span>Гайд</span> створено на основі <span>ефективних і перевірених</span> психологічних
+                <span>технік</span>, які підходять для кожного.
+              </p>
+            </div>
+            <a class="pulse-2" href="#"><img src="images/icons/intro-arrow.svg" alt="arrow"></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="container">
+          <h3 class="title">Пропонуємо<span style="background-image: url('images/icons/title-4.svg');"></span>
+          </h3>
+          <ul class="services__list">
+            <li class="gradient-border">
+              <h6>Індивідуальна консультація</h6>
+              <div class="services__price">
+                2500 <span>грн/год</span>
+              </div>
+              <div class="services__list-title">
+                Основні напрямки:
+              </div>
+              <ul>
+                <li>Відновлення емоційної стабільності</li>
+                <li>Робота з тривогою та стресом</li>
+                <li>Підвищення самооцінки</li>
+                <li>Особистісний розвиток</li>
+                <li>Стратегія досягнення цілей</li>
+              </ul>
+              <a href="#" class="btn">Замовити</a>
+            </li>
+
+            <li class="gradient-border">
+              <h6>Трансформаційна гра "Ліла"</h6>
+              <div class="services__price">
+                4000 <span>грн/до 2 годин</span>
+              </div>
+              <p>"Ліла" — це психологічна гра, що допомагає глибше пізнати себе, усвідомити життєві стратегії та
+                подолати обмеження.</p>
+              <div class="services__list-title">
+                Переваги гри:
+              </div>
+              <ul>
+                <li>Аналіз власних життєвих рішень</li>
+                <li>Отримання відповідей на важливі питання</li>
+                <li>Підвищення рівня усвідомленості та гармонії</li>
+              </ul>
+              <a href="#" class="btn">Замовити</a>
+            </li>
+
+            <li class="gradient-border">
+              <h6>Програма "Разом до мети"</h6>
+              <div class="services__price">
+                <div class="sum active" data-sum="1">8000</div>
+                <div class="sum" data-sum="2">15000</div>
+                <span>грн/5 тижнів</span>
+              </div>
+              <p>Покроковий підхід до досягнення цілей та управління життям.</p>
+              <div class="services__list-title">
+                Формати:
+              </div>
+
+              <div class="services__btns">
+                <button class="tab-link active" data-tab="1">Групова робота</button>
+                <button class="tab-link" data-tab="2">Групова робота + <span>індивідуальний коучинг</span> </button>
+              </div>
+              <div class="services__content">
+                <div class="services__box tab-content active" data-content="1">
+                  <ul>
+                    <li>Щотижневі онлайн-зустрічі та підтримка у Telegram</li>
+                  </ul>
+                  <a href="#" class="btn">Замовити</a>
+                </div>
+                <div class="services__box tab-content" data-content="2">
+                  <ul>
+                    <li>Додаткові персональні сесії </li>
+                  </ul>
+                  <a href="#" class="btn">Замовити</a>
+                </div>
+              </div>
+            </li>
+
+
+            <li class="gradient-border">
+              <h6>Клуб Свідомих Людей</h6>
+              <div class="services__price">
+                <div class="sum active" data-sum="1">4000</div>
+                <div class="sum" data-sum="2">8000</div>
+                <span>грн/місяць</span>
+              </div>
+              <p>Довгострокова програма для жінок, що допомагає будувати гармонійне життя у всіх сферах</p>
+              <div class="services__list-title">
+                Формати:
+              </div>
+
+              <div class="services__btns">
+                <button class="tab-link active" data-tab="1">Групова робота</button>
+                <button class="tab-link" data-tab="2">Супровід</button>
+              </div>
+              <div class="services__content">
+                <div class="services__box tab-content active" data-content="1">
+                  <ul>
+                    <li>Онлайн-зустрічі кожні два тижні</li>
+                    <li>Тривалість: 6 місяців</li>
+                  </ul>
+                  <a href="#" class="btn">Замовити</a>
+                </div>
+                <div class="services__box tab-content" data-content="2">
+                  <ul>
+                    <li>Доступ до лекцій та 2 індивідуальні терапевтичні сесії</li>
+                    <li>Тривалість: 6 місяців</li>
+                  </ul>
+                  <a href="#" class="btn">Замовити</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="start">
+        <div class="container">
+          <h3 class="title">Старт <br> програми <span style="background-image: url('images/icons/title-3.svg');"></span>
+          </h3>
+          <div class="start__box">Учасниці отримають доступ до всіх матеріалів і записів лекцій.</div>
+        </div>
+      </section>
+
+
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <ul class="soc">
+            <li>
+              <a href="#" target="_blank">
+                <img src="images/icons/inst.svg" alt="instagram">
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <img src="images/icons/telegram.svg" alt="telegram">
+              </a>
+            </li>
+          </ul>
+          <div class="footer__links">
+            <a href="#">Умови використання </a>
+            <a href="#">Політика конфіденційності</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>© 2024 Всі права захищені.</p>
+        </div>
+      </div>
+    </footer>
   </div>
 
 
