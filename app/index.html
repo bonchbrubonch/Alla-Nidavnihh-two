@@ -145,8 +145,28 @@
                 </div>
               </div>
             </li>
+            <li class="Accordion__tab gradient-border" onclick="toggleAccordion(this)">
+              <div class="Accordion__tab__headline">
+                <h4>Чи можна використовувати вправи для боротьби з безсонням?</h4><span class="icon"></span>
+              </div>
+              <div class="Accordion__tab__content">
+                <div class="wrapper">
+                  <p>Lorem ipsum dolor sit amet...</p>
+                </div>
+              </div>
+            </li>
+            <li class="Accordion__tab gradient-border" onclick="toggleAccordion(this)">
+              <div class="Accordion__tab__headline">
+                <h4>Чи можна використовувати вправи для боротьби з безсонням?</h4><span class="icon"></span>
+              </div>
+              <div class="Accordion__tab__content">
+                <div class="wrapper">
+                  <p>Lorem ipsum dolor sit amet...</p>
+                </div>
+              </div>
+            </li>
           </ul>
-          <a href="#" class="btn">Читати ще<img src="images/icons/intro-arrow3.svg" alt="arrow"></a>
+          <button class="btn btn-acordion">Читати ще<img src="images/icons/intro-arrow3.svg" alt="arrow"></button>
         </div>
       </section>
 
@@ -162,7 +182,8 @@
                 українців</span>, допомагаючи їм зберегти ментальне здоров'я. </p>
             <div class="author__inner gradient-border">
               <p><span>Гайд</span> створено на основі <span>ефективних і перевірених</span> психологічних
-                <span>технік</span>, які підходять для кожного.</p>
+                <span>технік</span>, які підходять для кожного.
+              </p>
             </div>
             <a class="pulse-2" href="#"><img src="images/icons/intro-arrow.svg" alt="arrow"></a>
           </div>
@@ -197,7 +218,8 @@
               <div class="services__price">
                 4000 <span>грн/до 2 годин</span>
               </div>
-              <p>"Ліла" — це психологічна гра, що допомагає глибше пізнати себе, усвідомити життєві стратегії та подолати обмеження.</p>
+              <p>"Ліла" — це психологічна гра, що допомагає глибше пізнати себе, усвідомити життєві стратегії та
+                подолати обмеження.</p>
               <div class="services__list-title">
                 Переваги гри:
               </div>
@@ -210,42 +232,70 @@
             </li>
 
             <li class="gradient-border">
-              <h6>Програма "Разом до мети</h6>
+              <h6>Програма "Разом до мети"</h6>
               <div class="services__price">
-                8000 <span>грн/5 тижнів</span>
+                <div class="sum active" data-sum="1">8000</div>
+                <div class="sum" data-sum="2">15000</div>
+                <span>грн/5 тижнів</span>
               </div>
               <p>Покроковий підхід до досягнення цілей та управління життям.</p>
               <div class="services__list-title">
                 Формати:
               </div>
+
               <div class="services__btns">
-                <a href="#">Групова робота</a>
-                <a href="#">Групова робота +</a>
+                <button class="tab-link active" data-tab="1">Групова робота</button>
+                <button class="tab-link" data-tab="2">Групова робота + <span>індивідуальний коучинг</span> </button>
               </div>
-              <ul>
-                <li>Щотижневі онлайн-зустрічі та підтримка у Telegram</li>
-              </ul>
-              <a href="#" class="btn">Замовити</a>
+              <div class="services__content">
+                <div class="services__box tab-content active" data-content="1">
+                  <ul>
+                    <li>Щотижневі онлайн-зустрічі та підтримка у Telegram</li>
+                  </ul>
+                  <a href="#" class="btn">Замовити</a>
+                </div>
+                <div class="services__box tab-content" data-content="2">
+                  <ul>
+                    <li>Додаткові персональні сесії </li>
+                  </ul>
+                  <a href="#" class="btn">Замовити</a>
+                </div>
+              </div>
             </li>
+
 
             <li class="gradient-border">
               <h6>Клуб Свідомих Людей</h6>
               <div class="services__price">
-                4000 <span>грн/5 тижнів</span>
+                <div class="sum active" data-sum="1">4000</div>
+                <div class="sum" data-sum="2">8000</div>
+                <span>грн/5 тижнів</span>
               </div>
               <p>Довгострокова програма для жінок, що допомагає будувати гармонійне життя у всіх сферах</p>
               <div class="services__list-title">
                 Формати:
               </div>
+
               <div class="services__btns">
-                <a href="#">Групова робота</a>
-                <a href="#">Супровід</a>
+                <button class="tab-link active" data-tab="1">Групова робота</button>
+                <button class="tab-link" data-tab="2">Супровід</button>
               </div>
-              <ul>
-                <li>Онлайн-зустрічі кожні два тижні</li>
-                <li>Тривалість: 6 місяців</li>
-              </ul>
-              <a href="#" class="btn">Замовити</a>
+              <div class="services__content">
+                <div class="services__box tab-content active" data-content="1">
+                  <ul>
+                    <li>Онлайн-зустрічі кожні два тижні</li>
+                    <li>Тривалість: 6 місяців</li>
+                  </ul>
+                  <a href="#" class="btn">Замовити</a>
+                </div>
+                <div class="services__box tab-content" data-content="2">
+                  <ul>
+                    <li>Доступ до лекцій та 2 індивідуальні терапевтичні сесії</li>
+                    <li>Тривалість: 6 місяців</li>
+                  </ul>
+                  <a href="#" class="btn">Замовити</a>
+                </div>
+              </div>
             </li>
           </ul>
         </div>

@@ -321,6 +321,25 @@
 	}
 }
 
+
+.Accordion__tab{
+	display: none;
+}
+.Accordion__tab:nth-child(1),
+.Accordion__tab:nth-child(2),
+.Accordion__tab:nth-child(3),
+.Accordion__tab:nth-child(4),
+.Accordion__tab:nth-child(5){
+	display: block;
+}
+.Accordion.open{
+	.btn-acordion{
+		display: none;
+	}
+	.Accordion__tab{
+		display: block !important;
+	}
+}
 /////////////////////
 .author {
 	padding: 30px 0 80px;
@@ -466,6 +485,8 @@
 	}
 
 	&__price {
+		display: flex;
+		align-items: baseline;
 		color: rgb(92, 38, 110);
 		font-family: "Montserrat Alternates", serif;
 		font-size: 40px;
@@ -473,6 +494,8 @@
 		line-height: 140%;
 
 		span {
+			display: flex;
+			transform: translate(5px, -4px);
 			color: rgb(181, 103, 207);
 			font-family: "Gilroy";
 			font-size: 14px;
@@ -521,9 +544,10 @@
 
 	&__btns {
 		display: flex;
+		flex-wrap: wrap;
 		margin: 0 0 15px -10px;
 
-		a {
+		button {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -535,22 +559,69 @@
 			font-size: 14px;
 			font-weight: 400;
 			line-height: 140%;
-
+			border: none;
+			cursor: pointer;
+			background-color: transparent;
+			color: rgb(92, 38, 110);
+			border: 1px solid rgb(181, 103, 207);
+			transition: linear .2s;
+			span{
+				display: none;
+			}
 		}
 
-		a:nth-child(1) {
+		button.active {
 			background: rgb(181, 103, 207);
 			color: #fff;
 		}
 
-		a:nth-child(2) {
-			color: rgb(92, 38, 110);
-			border: 1px solid rgb(181, 103, 207);
-
+	}
+	li:nth-child(3){
+		button:nth-child(2).active {
+			margin: 10px 0 0 0;
+		width: calc(100% - 10px);
+		span{
+			margin: 0 0 0 5px;
+			display: block;
+		}
 		}
 	}
-
 }
+.services__box,
+.sum {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.services__box.active,
+.sum.active {
+  display: block;
+  opacity: 1;
+}
+
+.services__btns a {
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.services__btns a.active {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
 
 
 .start {
