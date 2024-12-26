@@ -133,7 +133,11 @@
 		margin: 0 0 75px 0;
 
 		span {
-			bottom: -30px;
+			bottom: -44px;
+			right: -114px;
+			width: 170px;
+			height: 66px;
+			transform: rotate(0);
 		}
 	}
 
@@ -176,8 +180,11 @@
 		margin: 0 0 90px 0;
 
 		span {
-			bottom: -45px;
-			right: -75px;
+			bottom: -46px;
+			right: -93px;
+			width: 170px;
+			height: 66px;
+			transform: rotate(0);
 		}
 	}
 
@@ -214,13 +221,17 @@
 
 	h6 {
 		margin: 0 0 5px 0;
+		font-family: "Montserrat Alternates", serif;
 		font-size: 16px;
 		font-weight: 600;
 	}
 
 	p {
+		font-family: "Gilroy";
 		font-size: 14px;
-		margin: 0;
+		font-weight: 400;
+		line-height: 140%;
+		letter-spacing: .1px;
 	}
 
 	.btn {
@@ -380,7 +391,11 @@
 		margin: 0 0 75px 0;
 
 		span {
-			bottom: -30px;
+			bottom: -43px;
+			right: -116px;
+			width: 170px;
+			height: 66px;
+			transform: rotate(0);
 		}
 	}
 
@@ -597,7 +612,7 @@
 			justify-content: center;
 			align-items: center;
 			text-align: center;
-			width: calc(50% - 10px);
+			width: fit-content;
 			margin: 0 0 0 10px;
 			height: 36px;
 			border-radius: 50px;
@@ -610,7 +625,7 @@
 			color: rgb(92, 38, 110);
 			border: 1px solid rgb(181, 103, 207);
 			transition: linear .2s;
-
+			padding: 8px 15px;
 			span {
 				display: none;
 			}
@@ -697,6 +712,7 @@
 		margin: 0 0 0 -15px;
 	}
 }
+
 @media (max-width: 400px) {
 	.start {
 		min-height: 365px;
@@ -714,6 +730,7 @@
 		font-size: 24px;
 	}
 }
+
 .footer {
 	background-color: #1A1600;
 	color: #fff;
